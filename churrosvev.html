@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Churros V&V – Os Mais Gostosos da Cidade</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Nunito:wght@400;600;700;800;900&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="custom-cursor" id="cursor"></div>
+
+<canvas id="particles"></canvas>
+
+<a class="wa-float" href="https://wa.me/5521977721221" target="_blank" rel="noopener" title="Fale conosco no WhatsApp">
+  <svg viewBox="0 0 32 32" fill="white" xmlns="http://www.w3.org/2000/svg">
+    <path d="M16 2C8.268 2 2 8.268 2 16c0 2.478.671 4.8 1.84 6.79L2 30l7.407-1.807A13.94 13.94 0 0016 30c7.732 0 14-6.268 14-14S23.732 2 16 2zm7.07 19.07c-.3.84-1.77 1.6-2.45 1.65-.63.04-1.22.3-4.12-.87-3.5-1.4-5.74-4.97-5.91-5.2-.17-.23-1.4-1.87-1.4-3.57 0-1.7.89-2.53 1.2-2.88.31-.35.68-.44.91-.44.23 0 .45.002.65.01.21.01.49-.08.77.59.3.7 1 2.43 1.09 2.6.09.17.15.38.03.6-.12.23-.18.37-.35.57-.17.2-.36.45-.51.61-.17.17-.35.35-.15.7.2.35.89 1.46 1.91 2.36 1.31 1.17 2.41 1.53 2.76 1.7.35.17.55.15.76-.09.21-.24.9-1.05 1.14-1.41.24-.36.48-.3.81-.18.33.12 2.1 1 2.45 1.18.35.18.58.27.67.42.09.15.09.87-.21 1.71z"/>
+  </svg>
+</a>
+
+<nav id="navbar">
+  <a class="nav-logo" href="#">Churros <span>V&V</span></a>
+  <div class="nav-links">
+    <a href="#porque">Por que nós?</a>
+    <a href="#cardapio">Cardápio</a>
+    <a href="#depoimentos">Avaliações</a>
+  </div>
+  <a class="nav-cta" href="https://wa.me/5521977721221" target="_blank">Pedir Agora 🍡</a>
+  <div class="hamburger" id="hamburger">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<div class="nav-overlay" id="navOverlay">
+  <span class="overlay-close" id="overlayClose">✕</span>
+  <a href="#porque" onclick="closeNav()">Por que nós?</a>
+  <a href="#cardapio" onclick="closeNav()">Cardápio</a>
+  <a href="#depoimentos" onclick="closeNav()">Avaliações</a>
+  <a href="https://wa.me/5521977721221" target="_blank" style="color:var(--pink)">Pedir no WhatsApp</a>
+</div>
+
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-content">
+    <div class="hero-badge">Feitos com amor desde sempre</div>
+    <h1 class="hero-title">
+      O churros que <span class="accent">vicia</span><br>e a saudade que <span class="gold">não passa.</span>
+    </h1>
+    <p class="hero-sub">
+      Crocante por fora, recheado por dentro e feito com
+      <em>o carinho de vó</em> em cada mordida. É impossível comer só um.
+    </p>
+    <div class="hero-btns">
+      <a class="btn-primary" href="#cardapio">Ver o Cardápio 🍡</a>
+      <a class="btn-secondary" href="https://wa.me/5521977721221" target="_blank">Pedir no WhatsApp</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><div class="stat-num">5.0★</div><div class="stat-label">Avaliação</div></div>
+      <div class="stat"><div class="stat-num">+ de mil</div><div class="stat-label">Clientes felizes</div></div>
+      <div class="stat"><div class="stat-num">100%</div><div class="stat-label">Feito artesanal</div></div>
+    </div>
+  </div>
+  <div class="hero-scroll-hint">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+    Scroll
+  </div>
+</section>
+
+<div class="ticker-wrap">
+  <div class="ticker-track">
+    <span class="ticker-item">Churros Artesanal</span>
+    <span class="ticker-item">Recheio que Transborda</span>
+    <span class="ticker-item">Crocante por fora</span>
+    <span class="ticker-item">Feito com Amor</span>
+    <span class="ticker-item">Churros V&V</span>
+    <span class="ticker-item">Irresistível</span>
+    <span class="ticker-item">Peça já pelo WhatsApp</span>
+    <span class="ticker-item">Churros Artesanal</span>
+    <span class="ticker-item">Recheio que Transborda</span>
+    <span class="ticker-item">Crocante por fora</span>
+    <span class="ticker-item">Feito com Amor</span>
+    <span class="ticker-item">Churros V&V</span>
+    <span class="ticker-item">Irresistível</span>
+    <span class="ticker-item">Peça já pelo WhatsApp</span>
+  </div>
+</div>
+
+<section class="why" id="porque">
+  <div class="why-inner">
+    <div class="why-visual reveal">
+      <div class="why-emoji-bg">
+        🍡
+        <div class="why-orbits">
+          <div class="orbit-dot">🍫</div>
+          <div class="orbit-dot">🍓</div>
+          <div class="orbit-dot">🥜</div>
+          <div class="orbit-dot">✨</div>
+        </div>
+      </div>
+    </div>
+    <div class="why-cards">
+      <div class="section-label reveal">Por que V&V?</div>
+      <h2 class="section-title reveal">Cada churros é <span class="pink">uma experiência</span></h2>
+      <p class="section-desc reveal">Não é só comida. É afeto em forma de massa frita, canela e recheio. Feito igual a vó fazia, mas com os sabores que você sempre quis.</p>
+      <div class="why-card reveal reveal-delay-1">
+        <div class="why-icon">🔥</div>
+        <div>
+          <h3>Fresquinho & Crocante</h3>
+          <p>Feito na hora, sem pressa. A casca estalando e o recheio quente, do jeitinho que tem que ser.</p>
+        </div>
+      </div>
+      <div class="why-card reveal reveal-delay-2">
+        <div class="why-icon">❤️</div>
+        <div>
+          <h3>Receita de Família</h3>
+          <p>A mesma receita passada de geração em geração. Sem segredos industriais – só carinho e ingredientes de qualidade.</p>
+        </div>
+      </div>
+      <div class="why-card reveal reveal-delay-3">
+        <div class="why-icon">✨</div>
+        <div>
+          <h3>Recheios que Vão Além</h3>
+          <p>Doce de leite, Nutella, morango, creme de avelã e muito mais. Combinações que deixam qualquer um com água na boca.</p>
+        </div>
+      </div>
+      <div class="why-card reveal reveal-delay-4">
+        <div class="why-icon">🚀</div>
+        <div>
+          <h3>Peça sem Sair de Casa</h3>
+          <p>Atendimento rápido pelo WhatsApp. Retire ou consulte sobre delivery. Simples assim.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="menu" id="cardapio">
+  <div class="menu-header">
+    <div class="section-label reveal">Cardápio</div>
+    <h2 class="section-title reveal">Escolha o seu <span class="gold">favorito</span></h2>
+    <p class="section-desc reveal" style="margin:14px auto 0;">Difícil parar em um só. Cada opção é uma tentação diferente.</p>
+    <div class="menu-tabs reveal">
+    <button class="tab-btn active" onclick="filterMenu('todos', this)">Todos</button>
+    <button class="tab-btn" onclick="filterMenu('doce', this)">Churros Doces</button>
+    <button class="tab-btn" onclick="filterMenu('kcchurros', this)">K-Churros</button>
+    <button class="tab-btn" onclick="filterMenu('pastel', this)">Pastéis</button>
+    <button class="tab-btn" onclick="filterMenu('bebida', this)">Bebidas</button>
+  </div>
+  </div>
+  <div class="menu-grid" id="menuGrid"></div>
+</section>
+
+<section class="craving">
+  <div class="craving-inner">
+    <h2>Já tá com aquela vontade irresistível? 🤤</h2>
+    <p>A gente sabe que depois de ver tudo isso, seu estômago já tá pedindo socorro. Não deixa ele esperando – um churros fresquinho tá a um clique de distância.</p>
+    <a class="btn-white" href="https://wa.me/5521977721221" target="_blank">Quero meu churros AGORA! 🍡</a>
+  </div>
+</section>
+
+<section class="testimonials" id="depoimentos">
+  <div class="test-header">
+    <div class="section-label reveal">Depoimentos</div>
+    <h2 class="section-title reveal">O que estão <span class="pink">dizendo</span></h2>
+  </div>
+  <div class="test-grid">
+    <div class="test-card reveal reveal-delay-1">
+      <div class="stars">★★★★★</div>
+      <p>"Eu simplesmente amooo os churros de vcs!!! 😍Super delicioso, feito na hora, caprichado e com muito amor ! Parabéns! 👏🏼👏🏼👏🏼Sou apaixonada em cada sabor, desde os tradicionais (doces), até os salgados (conheci através de vcs e agora não consigo mais parar de comer) kkk
+      Aaah, não posso deixar de falar também na simpatia desse casal nota 10! 🥰👏🏼👏🏼 Sucesso pra vcs!"</p>
+      <div class="test-author">
+        <div class="test-avatar">👩‍🦱</div>
+        <div><div class="test-name">Vivianne Félix</div><div class="test-loc">RJ - Rio de Janeiro</div></div>
+      </div>
+    </div>
+    <div class="test-card reveal reveal-delay-2">
+      <div class="stars">★★★★★</div>
+      <p>"Bom pra começa já conheço é uma excelente pessoa maravilhosa gente muito boa.
+      Agora falando do churros que comi pela primeira vez nossaaaaaaaa meu amor que churrooooooooos delicioso adoreiiiiiii😘💓💓💓💓 continue assim que vai longe parabéns é sucesso sempre.👋👋👋👋😘 é muito simpática sorridente sempre amo demais flor.... É assim comi alguns por que os outros hahahaha meu amor se prepara vou comer e todos até o que lança já quero muito bom quentinho é bem caprichado com higiene 🙏🏻"</p>
+      <div class="test-author">
+        <div class="test-avatar">👩‍🦱</div>
+        <div><div class="test-name">Isabella Martins</div><div class="test-loc">RJ - Rio de Janeiro</div></div>
+      </div>
+    </div>
+    <div class="test-card reveal reveal-delay-3">
+      <div class="stars">★★★★★</div>
+      <p>"Uma delícia!! O melhor churro da vida! ❤️❤️"</p>
+      <div class="test-author">
+        <div class="test-avatar">👩‍🦱</div>
+        <div><div class="test-name">Chrys Silva</div><div class="test-loc">RJ - Rio de Janeiro</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-bottom">
+  <h2 class="reveal">Bora pedir agora? 🍡</h2>
+  <p class="reveal">Entre em contato pelo WhatsApp e garanta o seu churros fresquinho. A gente responde rapidinho!</p>
+  <a class="wa-big reveal" href="https://wa.me/5521977721221" target="_blank">
+    <svg viewBox="0 0 32 32" fill="white" xmlns="http://www.w3.org/2000/svg">
+      <path d="M16 2C8.268 2 2 8.268 2 16c0 2.478.671 4.8 1.84 6.79L2 30l7.407-1.807A13.94 13.94 0 0016 30c7.732 0 14-6.268 14-14S23.732 2 16 2zm7.07 19.07c-.3.84-1.77 1.6-2.45 1.65-.63.04-1.22.3-4.12-.87-3.5-1.4-5.74-4.97-5.91-5.2-.17-.23-1.4-1.87-1.4-3.57 0-1.7.89-2.53 1.2-2.88.31-.35.68-.44.91-.44.23 0 .45.002.65.01.21.01.49-.08.77.59.3.7 1 2.43 1.09 2.6.09.17.15.38.03.6-.12.23-.18.37-.35.57-.17.2-.36.45-.51.61-.17.17-.35.35-.15.7.2.35.89 1.46 1.91 2.36 1.31 1.17 2.41 1.53 2.76 1.7.35.17.55.15.76-.09.21-.24.9-1.05 1.14-1.41.24-.36.48-.3.81-.18.33.12 2.1 1 2.45 1.18.35.18.58.27.67.42.09.15.09.87-.21 1.71z"/>
+    </svg>
+    Chamar no WhatsApp
+  </a>
+</section>
+
+<footer>
+  <div class="footer-logo">Churros <span>V&V</span></div>
+  <p class="footer-tagline">Feito com amor, açúcar e muito carinho de vó 🍡</p>
+  <div class="footer-links">
+    <a href="#porque">Por que nós?</a>
+    <a href="#cardapio">Cardápio</a>
+    <a href="#depoimentos">Avaliações</a>
+    <a href="https://wa.me/5521977721221" target="_blank">WhatsApp</a>
+  </div>
+  <p class="footer-copy">© 2025 Churros V&V · Feito com <span class="footer-heart">♥</span></p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
